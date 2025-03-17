@@ -1,8 +1,8 @@
 
 import React from 'react';
 import Section from '../ui/Section';
-import Card from '../ui/Card';
 import { MessageSquare, BarChart, Lightbulb } from 'lucide-react';
+import { Card, CardContent } from '../ui/card';
 
 const stepsData = [
   {
@@ -44,16 +44,16 @@ const HowItWorks = () => {
               style={{ animationDelay: `${0.2 + index * 0.2}s`, animationFillMode: 'forwards' }}
             >
               <Card className="relative z-10 h-full hover:translate-y-[-8px] transition-transform duration-300">
-                <Card.Content className="text-center">
+                <CardContent className="p-6 text-center">
                   <div className="w-16 h-16 bg-leaf-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white relative">
                     {step.icon}
                     <div className="absolute -right-2 -top-2 w-8 h-8 rounded-full bg-white flex items-center justify-center text-leaf-700 font-bold shadow-md">
                       {index + 1}
                     </div>
                   </div>
-                  <Card.Title>{step.title}</Card.Title>
-                  <Card.Description>{step.description}</Card.Description>
-                </Card.Content>
+                  <h3 className="font-semibold text-xl mb-2">{step.title}</h3>
+                  <p className="text-muted-foreground">{step.description}</p>
+                </CardContent>
               </Card>
             </div>
           ))}

@@ -1,16 +1,16 @@
 
 import React from 'react';
 import Section from '../ui/Section';
-import { Plant, Flask, Database, GraduationCap } from 'lucide-react';
+import { Sprout, Beaker, Database, GraduationCap } from 'lucide-react';
 
 const featuresData = [
   {
-    icon: <Plant className="h-6 w-6" />,
+    icon: <Sprout className="h-6 w-6" />,
     title: "Nutrientes e Culturas",
     description: "Quantidades de nutrientes absorvidos e exportados pelas diferentes culturas."
   },
   {
-    icon: <Flask className="h-6 w-6" />,
+    icon: <Beaker className="h-6 w-6" />,
     title: "Fertilizantes",
     description: "Recomendações precisas de fertilizantes para diferentes condições de solo e culturas."
   },

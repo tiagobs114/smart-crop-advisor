@@ -15,12 +15,13 @@ const Index = () => {
       const scrollElements = document.querySelectorAll('.animate-on-scroll');
       
       scrollElements.forEach((element) => {
-        const elementPosition = element.getBoundingClientRect().top;
+        const htmlElement = element as HTMLElement;
+        const elementPosition = htmlElement.getBoundingClientRect().top;
         const viewportHeight = window.innerHeight;
         
         if (elementPosition < viewportHeight * 0.85) {
-          element.classList.add('animate-fade-in');
-          element.style.opacity = '1';
+          htmlElement.classList.add('animate-fade-in');
+          htmlElement.style.opacity = '1';
         }
       });
     };
