@@ -7,6 +7,7 @@ import About from '../components/sections/About';
 import Benefits from '../components/sections/Benefits';
 import Features from '../components/sections/Features';
 import HowItWorks from '../components/sections/HowItWorks';
+import ChatSection from '../components/sections/ChatSection';
 import Cta from '../components/sections/Cta';
 
 const Index = () => {
@@ -45,6 +46,7 @@ const Index = () => {
         <Benefits />
         <Features />
         <HowItWorks />
+        <ChatSection />
         <Cta />
       </main>
       

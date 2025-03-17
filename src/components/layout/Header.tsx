@@ -9,6 +9,7 @@ const navigation = [
   { name: 'Benefícios', href: '#benefits' },
   { name: 'Recursos', href: '#features' },
   { name: 'Como Funciona', href: '#how-it-works' },
+  { name: 'Chat', href: '#chat' },
 ];
 
 const Header = () => {
