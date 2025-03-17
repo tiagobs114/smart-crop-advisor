@@ -9,6 +9,7 @@ import Features from '../components/sections/Features';
 import HowItWorks from '../components/sections/HowItWorks';
 import ChatSection from '../components/sections/ChatSection';
 import Cta from '../components/sections/Cta';
+import Funding from '../components/sections/Funding';
 
 const Index = () => {
   useEffect(() => {
@@ -48,6 +49,7 @@ const Index = () => {
         <HowItWorks />
         <ChatSection />
         <Cta />
+        <Funding />
       </main>
       
       <Footer />
