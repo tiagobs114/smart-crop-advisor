@@ -8,12 +8,17 @@ const Funding = () => {
     <Section className="py-10 bg-soil-50">
       <div className="flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex-1">
-          <h3 className="text-xl font-semibold text-soil-800 mb-2">Projeto de CCD da Fapesp</h3>
+          <h3 className="text-xl font-semibold text-soil-800 mb-2">Projeto de CCD da FAPESP</h3>
           <p className="text-soil-700">
-            Este é um projeto de Capacitação em Ciência de Dados (CCD) financiado pela Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP).
+            Este é um projeto de Centros de Ciência para o Desenvolvimento (CCD) financiado pela Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP).
           </p>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center gap-4">
+          <img 
+            src="/lovable-uploads/8bedc30a-bd6c-4fc9-b2c9-c200838698e2.png" 
+            alt="Logo da FAPESP" 
+            className="h-16 object-contain"
+          />
           <a 
             href="https://fapesp.br" 
             target="_blank" 
