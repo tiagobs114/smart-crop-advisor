@@ -6,24 +6,19 @@ import { ExternalLink } from 'lucide-react';
 const Funding = () => {
   return (
     <Section className="py-10 bg-soil-50">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="flex-1">
-          <h3 className="text-xl font-semibold text-soil-800 mb-2">Projeto CCD da FAPESP</h3>
-          <p className="text-soil-700 mb-3">
+      <div className="flex flex-col items-center justify-between gap-6">
+        <div>
+          <h3 className="text-xl font-semibold text-soil-800 mb-2 text-center">Projeto CCD da FAPESP</h3>
+          <p className="text-soil-700 mb-3 max-w-3xl mx-auto text-center">
             O CCD SB100 é uma das 21 iniciativas dos Centros de Ciência para o Desenvolvimento (CCD) 
             financiados pela Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP).
           </p>
-          <p className="text-soil-700">
-            O projeto conta com o apoio de instituições como Unesp, USP/Esalq, Fatecs de Pompeia e Cotia, 
-            Fundação Shunji Nishimura e Secretaria de Agricultura e Abastecimento de São Paulo.
+          <p className="text-soil-700 max-w-3xl mx-auto text-center">
+            O projeto destaca-se por sua capacidade de levar inovações diretamente ao campo, 
+            promovendo o desenvolvimento rural e econômico do estado.
           </p>
         </div>
         <div className="flex items-center gap-4">
-          <img 
-            src="/lovable-uploads/8bedc30a-bd6c-4fc9-b2c9-c200838698e2.png" 
-            alt="Logo da FAPESP" 
-            className="h-16 object-contain"
-          />
           <a 
             href="https://fapesp.br" 
             target="_blank" 

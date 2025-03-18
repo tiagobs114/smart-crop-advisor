@@ -10,6 +10,7 @@ import HowItWorks from '../components/sections/HowItWorks';
 import ChatSection from '../components/sections/ChatSection';
 import Cta from '../components/sections/Cta';
 import Funding from '../components/sections/Funding';
+import Support from '../components/sections/Support';
 
 const Index = () => {
   useEffect(() => {
@@ -50,6 +51,7 @@ const Index = () => {
         <ChatSection />
         <Cta />
         <Funding />
+        <Support />
       </main>
       
       <Footer />
