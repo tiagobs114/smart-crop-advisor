@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import { Send } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import Section from '../ui/Section';
 import { ScrollArea } from "../ui/scroll-area";
+import { useToast } from "@/components/ui/use-toast";
 
 interface Message {
   id: number;
@@ -19,6 +19,7 @@ const ChatSection = () => {
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -36,24 +37,69 @@ const ChatSection = () => {
     setInput("");
     setIsLoading(true);
     
-    // Simulate AI response (in a real app, this would be an API call)
-    setTimeout(() => {
-      const aiResponses = [
-        "Com base no Boletim 100 do IAC, para essa cultura e condição de solo, recomendo uma adubação de 80 kg/ha de N, 120 kg/ha de P2O5 e 60 kg/ha de K2O.",
-        "Para calagem, considerando o método de saturação por bases, recomendo aplicar 2 toneladas de calcário por hectare para elevar a saturação a 70%.",
-        "Essa cultura requer atenção especial aos micronutrientes. Considere aplicar 2 kg/ha de zinco e 1 kg/ha de boro para um desenvolvimento adequado.",
-        "Segundo o Boletim 100, para solos com alto teor de matéria orgânica como o seu, a adubação nitrogenada pode ser reduzida em 20%."
-      ];
+    try {
+      // Call OpenRouter API
+      const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer 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',
+          'HTTP-Referer': window.location.origin,
+          'X-Title': 'SB100 - Assistente de Adubação e Calagem'
+        },
+        body: JSON.stringify({
+          model: 'google/gemma-3-1b-it:free',
+          messages: [
+            {
+              role: 'system',
+              content: 'Você é o SB100, um assistente especializado em recomendações de adubação e calagem baseadas no Boletim 100 do IAC (Instituto Agronômico de Campinas). Seu objetivo é auxiliar agricultores e técnicos com recomendações precisas sobre a quantidade de fertilizantes e calcário que devem ser aplicados em diferentes culturas, considerando as análises de solo e as necessidades específicas de cada planta. Forneça respostas técnicas, mas de fácil compreensão, sempre baseadas nas diretrizes oficiais do Boletim 100.'
+            },
+            ...messages.filter(msg => msg.id > 1).map(msg => ({
+              role: msg.isUser ? 'user' : 'assistant',
+              content: msg.text
+            })),
+            {
+              role: 'user',
+              content: input
+            }
+          ]
+        })
+      });
       
+      if (!response.ok) {
+        throw new Error('Falha na comunicação com a API');
+      }
+      
+      const data = await response.json();
+      const aiResponse = data.choices[0]?.message?.content || 'Desculpe, não consegui processar sua solicitação.';
+      
+      // Add AI message
       const aiMessage: Message = {
         id: messages.length + 2,
-        text: aiResponses[Math.floor(Math.random() * aiResponses.length)],
+        text: aiResponse,
         isUser: false
       };
       
       setMessages(prev => [...prev, aiMessage]);
+    } catch (error) {
+      console.error('Error calling OpenRouter API:', error);
+      toast({
+        title: "Erro de comunicação",
+        description: "Não foi possível conectar ao serviço de IA. Tente novamente mais tarde.",
+        variant: "destructive"
+      });
+      
+      // Add fallback error message from AI
+      const errorMessage: Message = {
+        id: messages.length + 2,
+        text: "Desculpe, estou enfrentando dificuldades técnicas no momento. Por favor, tente novamente mais tarde.",
+        isUser: false
+      };
+      
+      setMessages(prev => [...prev, errorMessage]);
+    } finally {
       setIsLoading(false);
-    }, 1500);
+    }
   };
 
   return (
@@ -116,7 +162,7 @@ const ChatSection = () => {
       </div>
       
       <div className="text-center text-sm text-muted-foreground mt-4">
-        <p>Esta demonstração simula respostas. Em produção, será conectado a uma IA treinada com o Boletim 100.</p>
+        <p>O SB100 é alimentado por IA e fornece recomendações baseadas no Boletim 100 do IAC.</p>
       </div>
     </Section>
   );
