@@ -16,16 +16,16 @@ const Cta = () => {
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <div className="animate-fade-in opacity-0" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
             <span className="inline-block bg-white/10 backdrop-blur-sm px-4 py-1 rounded-full text-sm font-medium mb-6">
-              Decisões inteligentes para o campo
+              Inovação para o Desenvolvimento Rural
             </span>
           </div>
           
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6 animate-fade-in opacity-0" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
-            Experimente o SB100 agora e tenha recomendações precisas para a sua lavoura!
+            Experimente a Smart B100 agora e transforme suas práticas agrícolas!
           </h2>
           
           <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto animate-fade-in opacity-0" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
-            Acesse conhecimento técnico especializado de forma simples e direta, e otimize o manejo nutricional das suas culturas.
+            Otimize o uso de fertilizantes, reduza impactos ambientais e aumente sua competitividade no mercado global com recomendações baseadas em ciência.
           </p>
           
           <div className="animate-fade-in opacity-0" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>

@@ -19,16 +19,16 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-4 animate-fade-in opacity-0" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
             <span className="inline-block bg-white/10 backdrop-blur-sm text-white px-4 py-1 rounded-full text-sm font-medium">
-              IA para Agricultura de Precisão
+              IA para Agricultura Sustentável
             </span>
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 hero-text-shadow animate-fade-in opacity-0" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
-            Respostas Precisas para Adubação e Calagem com IA
+            Smart B100: Inteligência Artificial para o Agronegócio Paulista
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto hero-text-shadow animate-fade-in opacity-0" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
-            Acesse recomendações do Boletim 100 de forma rápida e inteligente.
+            Transformando práticas agrícolas com recomendações de adubação e calagem baseadas no Boletim 100 do IAC.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in opacity-0" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>

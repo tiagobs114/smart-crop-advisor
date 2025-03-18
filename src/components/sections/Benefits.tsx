@@ -1,24 +1,24 @@
 
 import React from 'react';
 import Section from '../ui/Section';
-import { BookOpen, Clock, ThumbsUp } from 'lucide-react';
+import { LeafyGreen, BarChart, Zap } from 'lucide-react';
 import { Card, CardContent } from '../ui/card';
 
 const benefitsData = [
   {
-    icon: <BookOpen className="h-8 w-8" />,
-    title: "Recomendações Confiáveis",
-    description: "Baseado no Boletim 100 do IAC, referência técnica para adubação e calagem no estado de São Paulo."
+    icon: <LeafyGreen className="h-8 w-8" />,
+    title: "Otimização de Recursos",
+    description: "Ajuda os produtores a otimizar o uso de fertilizantes e bioinsumos, reduzindo desperdícios e impactos ambientais."
   },
   {
-    icon: <Clock className="h-8 w-8" />,
-    title: "Respostas Instantâneas",
-    description: "Nossa IA responde em segundos, eliminando a necessidade de pesquisar manualmente em documentos técnicos."
+    icon: <BarChart className="h-8 w-8" />,
+    title: "Índices Multicritério",
+    description: "Desenvolve índices multicritério para auxiliar na escolha de insumos agrícolas, promovendo maior produtividade e eficiência."
   },
   {
-    icon: <ThumbsUp className="h-8 w-8" />,
-    title: "Fácil de Usar",
-    description: "Interface intuitiva, sem complicações. Faça perguntas em linguagem natural e obtenha respostas diretas."
+    icon: <Zap className="h-8 w-8" />,
+    title: "Aumento de Competitividade",
+    description: "Ao combinar ciência de dados e práticas agrícolas, aumenta a competitividade dos produtores no mercado global."
   }
 ];
 
@@ -27,8 +27,8 @@ const Benefits = () => {
     <Section id="benefits" className="bg-muted">
       <Section.Header
         chip="Vantagens"
-        title="Por que usar o SB100?"
-        subtitle="Nossa solução simplifica o acesso às informações técnicas do Boletim 100, transformando conhecimento científico em respostas práticas para o campo."
+        title="Benefícios da IA ao produtor rural"
+        subtitle="A Smart B100 torna o conhecimento científico acessível e prático, integrando ciência de dados e práticas agrícolas tradicionais para transformar o agronegócio paulista."
         centered={true}
       />
       

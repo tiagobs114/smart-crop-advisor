@@ -10,19 +10,23 @@ const About = () => {
         <div className="animate-slide-in-left opacity-0" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
           <Section.Header
             chip="Inteligência Artificial"
-            title="O que é o SB100?"
+            title="O que é a Smart B100?"
             centered={false}
           />
           
           <p className="text-lg mb-6">
-            O SB100 é uma IA treinada para responder dúvidas sobre adubação e calagem com base no 
-            <span className="font-medium"> Boletim 100 do IAC</span>. Tenha acesso instantâneo a recomendações 
-            precisas para o solo e culturas do estado de São Paulo.
+            A Smart B100 é uma IA alimentada por dados do <span className="font-medium">Boletim 100 do IAC</span>, 
+            publicação que reúne informações essenciais sobre práticas agrícolas como adubação e calagem.
+          </p>
+          
+          <p className="text-lg mb-6">
+            Nossa plataforma integra métricas de saúde do solo, ciclo de carbono e respostas fisiológicas das 
+            plantas, com foco inicial nas culturas de citros e cana-de-açúcar.
           </p>
           
           <p className="text-lg">
-            Desenvolvido por especialistas em agricultura e inteligência artificial, o SB100 
-            transforma dados complexos em respostas simples e aplicáveis ao seu contexto agrícola.
+            "Esta é uma oportunidade de utilizar a tecnologia para integrar conhecimento científico ao dia a 
+            dia dos agricultores, promovendo ganhos em eficiência e sustentabilidade", diz Mattos Jr.
           </p>
           
           <div className="mt-8 flex items-center space-x-4">

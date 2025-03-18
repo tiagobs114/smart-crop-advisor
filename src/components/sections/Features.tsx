@@ -6,23 +6,23 @@ import { Sprout, Beaker, Database, GraduationCap } from 'lucide-react';
 const featuresData = [
   {
     icon: <Sprout className="h-6 w-6" />,
-    title: "Nutrientes e Culturas",
-    description: "Quantidades de nutrientes absorvidos e exportados pelas diferentes culturas."
+    title: "Foco em Culturas Estratégicas",
+    description: "Atendimento especializado para culturas de citros e cana-de-açúcar, com expansão prevista para outras culturas."
   },
   {
     icon: <Beaker className="h-6 w-6" />,
-    title: "Fertilizantes",
-    description: "Recomendações precisas de fertilizantes para diferentes condições de solo e culturas."
+    title: "Manejo Sustentável",
+    description: "Recomendações para uso criterioso de fertilizantes e promoção de práticas agrícolas sustentáveis."
   },
   {
     icon: <Database className="h-6 w-6" />,
-    title: "Valores de Referência",
-    description: "Teores de nutrientes nos solos e folhas para avaliação precisa da fertilidade."
+    title: "Integração de Dados",
+    description: "Combina métricas de saúde do solo, ciclo de carbono e respostas fisiológicas das plantas."
   },
   {
     icon: <GraduationCap className="h-6 w-6" />,
-    title: "Aspectos Teóricos",
-    description: "Fundamentos científicos que embasam as recomendações técnicas do Boletim 100."
+    title: "Suporte Institucional",
+    description: "Desenvolvido com apoio da Unesp, USP/Esalq, Fatecs, Fundação Shunji Nishimura e Secretaria de Agricultura de SP."
   }
 ];
 
@@ -31,8 +31,8 @@ const Features = () => {
     <Section id="features">
       <Section.Header
         chip="Recursos"
-        title="O que o Boletim 100 traz?"
-        subtitle="O Boletim Técnico 100 do IAC é o documento de referência para adubação e calagem no estado de São Paulo. O SB100 facilita o acesso a essas informações:"
+        title="Funcionalidades da Smart B100"
+        subtitle="Uma das 21 iniciativas lançadas pela Fapesp para oferecer soluções tecnológicas em áreas estratégicas, destacando-se por levar inovações diretamente ao campo:"
         centered={true}
       />
       

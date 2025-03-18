@@ -8,9 +8,14 @@ const Funding = () => {
     <Section className="py-10 bg-soil-50">
       <div className="flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex-1">
-          <h3 className="text-xl font-semibold text-soil-800 mb-2">Projeto de CCD da FAPESP</h3>
+          <h3 className="text-xl font-semibold text-soil-800 mb-2">Projeto CCD da FAPESP</h3>
+          <p className="text-soil-700 mb-3">
+            O CCD SB100 é uma das 21 iniciativas dos Centros de Ciência para o Desenvolvimento (CCD) 
+            financiados pela Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP).
+          </p>
           <p className="text-soil-700">
-            Este é um projeto de Centros de Ciência para o Desenvolvimento (CCD) financiado pela Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP).
+            O projeto conta com o apoio de instituições como Unesp, USP/Esalq, Fatecs de Pompeia e Cotia, 
+            Fundação Shunji Nishimura e Secretaria de Agricultura e Abastecimento de São Paulo.
           </p>
         </div>
         <div className="flex items-center gap-4">
